@@ -23,7 +23,11 @@ default: &default
 
 development:
   <<: *default
-  database: Budget_Tracker_Pro_development
+  database: Budget_Tracker_Pro
+  host: localhost
+  port: 5432
+  username: postgres
+  password: 1234.com
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +62,10 @@ development:
 test:
   <<: *default
   database: Budget_Tracker_Pro_test
+  host: localhost
+  port: 5432
+  username: postgres
+  password: 1234.com
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +89,6 @@ test:
 #
 production:
   <<: *default
-  database: Budget_Tracker_Pro_production
-  username: Budget_Tracker_Pro
+  database: Budget_Tracker_Pro
+  username: postgres
   password: <%= ENV["BUDGET_TRACKER_PRO_DATABASE_PASSWORD"] %>
