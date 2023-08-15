@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # get 'splash/index', to: "splash#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root 'splash#index'
+  resources :sections
   # Defines the root path route ("/")
   # root "articles#index"
 
