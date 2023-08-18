@@ -1,20 +1,23 @@
 Rails.application.routes.draw do
-  get 'transactions/index'
-  get 'transactions/create'
-  get 'transactions/new'
-  get 'transactions/show'
-  get 'users/index'
-  get 'users/show'
-  get 'users/new'
-  get 'users/edit'
- 
   devise_for :users
-  # get 'splash/index', to: "splash#index"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  root 'splash#index'
-  resources :sections
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_scope :user do
+    get 'users/sign_out', to: 'devise/sessions#destroy', as: :sign_out
+  end
+ 
 
+  get 'splash', to: 'static_pages#splash'
+  
+  authenticated :user do
+    root 'sections#index', as: :authenticated_root
+  end
 
+  unauthenticated do
+    root 'static_pages#splash', as: :unauthenticated_root
+  end
+
+  resources :users do
+    resources :sections do
+      resources :payments
+    end
+  end
 end
