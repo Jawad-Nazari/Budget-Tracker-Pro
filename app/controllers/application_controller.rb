@@ -1,15 +1,12 @@
 class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[email name password password_confirmation])
+  def after_sign_out_path_for(_resource_or_scope)
+    splash_path
   end
 
-  def authenticate_user!
-    if user_signed_in?
-      users_path
-    else
-      redirect_to new_user_session_path unless devise_controller?
-    end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 end
