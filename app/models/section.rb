@@ -4,7 +4,6 @@ class Section < ApplicationRecord
   has_many :payments, through: :section_payments
 
   has_one_attached :icon
-  
   validates :name, presence: true
   validates :icon, presence: true
 end
