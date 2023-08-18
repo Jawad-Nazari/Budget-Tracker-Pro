@@ -89,6 +89,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: Budget_Tracker_Pro
   username: postgres
   password: <%= ENV["BUDGET_TRACKER_PRO_DATABASE_PASSWORD"] %>
