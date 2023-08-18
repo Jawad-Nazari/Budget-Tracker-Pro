@@ -43,7 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_223611) do
   end
 
   create_table "payments", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.decimal "amount"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
