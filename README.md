@@ -1,6 +1,5 @@
 <a name="readme-top"></a>
 
-
 ![Logo](/app/assets/images/logo.ico)
 
 ## 📗 Table of Contents
@@ -28,10 +27,9 @@
 
 The **Budget Tacker Pro** is a mobile web application where you can manage your budget: you have a list of expenses associated with a group, so that you can see how much money you spent and on what. The app allows users to:
 
-- *Register and log in, so that the data is private to them.*
-- *Introduce new expenses associated with a group.*
-- *See the money spent on each group.*
-
+- _Register and log in, so that the data is private to them._
+- _Introduce new expenses associated with a group._
+- _See the money spent on each group._
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -109,7 +107,7 @@ To run tests, run the following command:
 
 ### Deployment
 
-[Deployment_link](Comming Soon)
+[Deployment_link](https://budgeat.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
