@@ -1,5 +1,5 @@
 databases:
-  - name: Budget-Tracker-Pro
+  - name: Budget-Tracker
     databaseName: Budget_Tracker_Pro
     user: postgres
 
