@@ -107,7 +107,7 @@ To run tests, run the following command:
 
 ### Deployment
 
-[Deployment_link](https://budgeat.onrender.com/)
+[Deployment_link](https://budget-tracker.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
